@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clima - JavaScript Moderno</title>
+
+    
+    <link href="css/tailwind.min.css" rel="stylesheet">
+     <link rel="stylesheet" href="spinner.css">
+</head>
+<style >
+    body{
+        background: linear-gradient(to right, #fb6f24, #FFFF00);
+    }
+    h1{
+
+   
+      color: #fffedf; /* Color */
+      font-size: 46px; /* Tamaño de fuente grande */
+      
+      text-transform: uppercase; /* Texto en mayúsculas */
+      font-family: didot;
+      text-align: center;
+      text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000,
+        -1px 1px 0 #000, 1px 1px 0 #000;
+      -webkit-text-stroke: 1px black;
+      padding: auto;
+      
+    
+    }
+    img{
+        text-align: center;
+         display: block;
+      margin-left: auto;
+      margin-right: auto;
+
+    }
+   
+</style>
+<body>
+
+    <div class="container mx-auto ">
+        <h1 >Busca el Clima</h1>
+        <img src="https://cdn-icons-png.flaticon.com/512/2105/2105242.png" width="200" height="200">
+        <div class="max-w-lg mx-auto ">
+
+            <div class="p-6 mt-10">
+                 <h1 id="hora"></h1>
+                <div id="resultado">
+                    <p class="text-center text-white mt-10 font-family arial">Agrega tu ciudad y país, el resultado se mostrará aquí</p>
+                </div>
+            </div>
+            
+            <form id="formulario" class="mt-10 " action="#" method="POST">
+                <div class="mt-5">
+                    <input 
+                        type="text" 
+                        name="ciudad"
+                        id="ciudad"
+                        placeholder="Escribe tu Ciudad"
+                        class="w-full p-2 rounded"
+                    />
+                </div>
+                <div class="mt-5">
+                    <select 
+                        class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" 
+                        id="pais"
+                    >
+                        <option disabled selected value="">-- Seleccione --</option>
+                        <option value="AR">Argentina</option>
+                        <option value="CO">Colombia</option>
+                        <option value="CR">Costa Rica</option>
+                        <option value="ES">España</option>
+                        <option value="US">Estados Unidos</option>
+                        <option value="MX">México</option>
+                        <option value="PE">Perú</option>
+                    </select>
+                </div>
+
+                <input 
+                    type="submit"
+                    class="mt-5 w-full bg-white-500 p-3  uppercase font-bold cursor-pointer rounded"
+                    value="Obtener Clima"
+                />
+                <button 
+                        class="mt-5 w-full bg-white-500 p-3  uppercase font-bold cursor-pointer rounded"
+                        type="reset"> Reset
+                    </button>
+            
+
+        <div id="spinner" class="hidden justify-center mt-10">
+           <div class="sk-chase">
+                 <div class="sk-chase-dot"></div>
+                 <div class="sk-chase-dot"></div>
+                 <div class="sk-chase-dot"></div>
+                 <div class="sk-chase-dot"></div>
+                 <div class="sk-chase-dot"></div>
+                 <div class="sk-chase-dot"></div>
+            </div>
+
+     
+        </div>
+    </form>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
